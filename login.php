@@ -1,53 +1,20 @@
-<?php 
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title><?php echo $results['title']; ?></title>
+</head>
+<body>
 
-session_start(); 
-
-
-
-$username="1"; // jouw gebruikersnaam 
-$password="1"; // jouw wachtwoord 
-
-
-
-$username1="2"; // jouw gebruikersnaam 
-$password1="2"; // jouw wachtwoord 
-
-
-if(!empty($_POST)) { 
-
-
-
-
-$_SESSION["username"]=$_POST["username"]; 
-$_SESSION["password"]=$_POST["password"];  
- 
-if(( $_SESSION["username"]!=$username) || ($_SESSION["password"]!=$password)) { 
-
-die("Je hebt een verkeerde gebruikersnaam of wachtwoord ingevoerd!<br> <a href=\"login.php\">Terug</a>"); 
-
-session_destroy(); 
-}else{ 
-header("Location: invoeren.php"); 
-} 
-}else{ 
-
-
-
- 
-}
-?>
-
-<html> 
-<body> 
-<center>
-
-<b>Welkom bij de easyconcept login pagina !</b>
-
-</br></br></br>
-<form method=post action="<?php $PHP_SELF ?>">  
-Gebruikersnaam: <input name=username name=username><br> 
-Wachtwoord: <input name=password type=password name=password><br> 
-<input type=submit value="Inloggen!">  </center>
+<form action="index.php?action=login" method="post">
+	<input type="hidden" name="login" value="true">
+	<h2><?php echo $results['title']; ?></h2>
+	<p>Gebruikersnaam = webprofis<br/>Wachtwoord = webprofis</p>
+	<?php if ( isset( $results['error'] ) ) { echo '<p>' . $results['error'] . '</p>'; } ?>
+	<input type="text" name="username" placeholder="Gebruikersnaam" required>
+	<input type="password" name="password" placeholder="Wachtwoord" required>
+	<button type="submit">Inloggen</button>
 </form>
-</body> 
+
+</body>
 </html>

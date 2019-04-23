@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  10%  {background-color:yellow; left:200px; top:0px;}
+  20%  {background-color:blue; left:200px; top:200px;}
+  30%  {background-color:green; left:0px; top:200px;}
+  40% {background-color:red; left:0px; top:0px;}
+  50%   {background-color:red; left:0px; top:0px;}
+  60%  {background-color:yellow; left:200px; top:0px;}
+  70%  {background-color:blue; left:200px; top:200px;}
+  80%  {background-color:green; left:0px; top:200px;}
+  90% {background-color:red; left:0px; top:0px;}
+  100%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("bg_image.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<p>Loading.</p>
+
+<div></div>
+<meta http-equiv="refresh" content="30; URL=http://www.metatags.nl/aanmelden">
+</body>
+</html>
